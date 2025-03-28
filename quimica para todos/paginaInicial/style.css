@@ -1,0 +1,48 @@
+.container {
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin: 4cm;
+    text-align: center;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.2);
+}
+
+.botao{
+    padding: 40px;
+    text-align: center;
+    width: 350px;
+    align-items: center;
+}
+
+.botao-aluno{
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    background-color: #211539; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 30px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: 0.3s; /* Animação suave */
+}
+.botao-prof{
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    background-color: #211539; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 30px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: 0.3s; /* Animação suave */
+}
