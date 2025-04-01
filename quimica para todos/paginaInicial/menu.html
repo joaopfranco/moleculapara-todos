@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução à Química</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #f5f3ef;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #1f1136;
+            color: white;
+            min-height: 100vh;
+            padding-top: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .menu-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        .menu-icon span {
+            font-size: 24px;
+        }
+
+        .sidebar-menu {
+            padding: 0 20px;
+        }
+
+        .sidebar-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-menu a:hover {
+            transform: translateX(10px);
+        }
+
+        .sidebar-footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sidebar-footer img {
+            height: 20px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .welcome-header {
+            text-align: center;
+            font-size: 32px;
+            color: #1f1136;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .menu-item {
+            height: 150px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: lowercase;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .intro {
+            background-color: #f06292;
+        }
+
+        .atomic {
+            background-color: #e9d72e;
+            color: #444;
+        }
+
+        .periodic {
+            background-color: #ab47bc;
+        }
+
+        .bonds {
+            background-color: #66bb6a;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 80px;
+            }
+
+            .sidebar-menu a span {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+                padding-bottom: 20px;
+            }
+
+            .sidebar-menu {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .sidebar-footer {
+                position: relative;
+                bottom: auto;
+                margin-top: 20px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .menu-item {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .intro {
+            animation-delay: 0.1s;
+        }
+
+        .atomic {
+            animation-delay: 0.2s;
+        }
+
+        .periodic {
+            animation-delay: 0.3s;
+        }
+
+        .bonds {
+            animation-delay: 0.4s;
+        }
+
+        .welcome-header {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="menu-icon">
+                <span>≡</span>
+            </div>
+        </div>
+        <div class="sidebar-menu">
+            <a href="#intro"><span>Introdução à Química</span></a>
+            <a href="#atomic"><span>Modelos Atômicos</span></a>
+            <a href="#periodic"><span>Tabela Periódica</span></a>
+            <a href="#bonds"><span>Ligações Químicas</span></a>
+        </div>
+        <div class="sidebar-footer">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSIyMCI+PHRleHQgeD0iMCIgeT0iMTUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjE0Ij5TRVNJIFNFTkFJPC90ZXh0Pjwvc3ZnPg==" alt="SESI SENAI">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PHBhdGggZD0iTTUsNUgxNVYxNUgxMFYxMEg1VjVaIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz48L3N2Zz4=" alt="Arrow">
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1 class="welcome-header">BEM VINDO(A), (NOME)!</h1>
+        
+        <div class="menu-grid">
+            <div class="menu-item intro" id="intro">
+                Introdução à Química
+            </div>
+            <div class="menu-item atomic" id="atomic">
+                modelos atomicos
+            </div>
+            <div class="menu-item periodic" id="periodic">
+                tabela periódica
+            </div>
+            <div class="menu-item bonds" id="bonds">
+                ligações químicas
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle sidebar on mobile
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            const sidebar = document.querySelector('.sidebar');
+            if (window.innerWidth <= 480) {
+                sidebar.style.height = sidebar.style.height === 'auto' ? '60px' : 'auto';
+            } else {
+                sidebar.style.width = sidebar.style.width === '80px' ? '200px' : '80px';
+                
+                const menuTexts = document.querySelectorAll('.sidebar-menu a span');
+                menuTexts.forEach(span => {
+                    span.style.display = span.style.display === 'none' ? 'inline' : 'none';
+                });
+            }
+        });
+
+        // Add hover animation to menu items
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.animation = 'pulse 0.5s infinite';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.animation = '';
+            });
+            
+            item.addEventListener('click', function() {
+                // Add click effect
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+
+        // Make responsive
+        window.addEventListener('resize', function() {
+            const sidebar = document.querySelector('.sidebar');
+            const menuTexts = document.querySelectorAll('.sidebar-menu a span');
+            
+            if (window.innerWidth <= 768) {
+                sidebar.style.width = '80px';
+                menuTexts.forEach(span => {
+                    span.style.display = 'none';
+                });
+            } else {
+                sidebar.style.width = '200px';
+                menuTexts.forEach(span => {
+                    span.style.display = 'inline';
+                });
+            }
+            
+            if (window.innerWidth <= 480) {
+                document.body.style.flexDirection = 'column';
+                sidebar.style.width = '100%';
+            } else {
+                document.body.style.flexDirection = 'row';
+            }
+        });
+    </script>
+</body>
+</html>
