@@ -69,6 +69,38 @@ body {
     font-size: 16px;
 }
 
+/* Ajuste para garantir que todos os inputs tenham o mesmo tamanho */
+input {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Configuração específica para a senha */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    padding-right: 40px; /* Garante espaço para o ícone */
+}
+
+/* Ícone do olho dentro do campo de senha */
+.password-container i {
+    position: absolute;
+    right: 10px; /* Posiciona o ícone corretamente */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+}
+
 .submit-btn {
     width: 100%;
     padding: 12px;
@@ -85,6 +117,8 @@ body {
 .submit-btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+
 
 @media (max-width: 768px) {
     .container {
