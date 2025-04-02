@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ciência para Todos - Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>catapimbas catamibas</h1>
+    <div class="container">
+        <div class="logo-container">
+            <img src="voucoringar.png" alt="Ciência para Todos">
+        </div>
+        <div class="login-container">
+            <h2>Faça seu Login</h2>
+            <form id="loginForm">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                
+                <label for="password">Senha</label>
+                <input type="password" id="password" required>
+                
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Não tem conta? <a href="#">Cadastre-se</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
