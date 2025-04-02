@@ -1,4 +1,17 @@
+.logo-container {
+    background: #f6f0e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+    height: 100%;
+    padding: 20px;
+}
 
+.logo-container img {
+    max-width: 80%;
+    height: auto;
+}
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +29,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #f6f0e8;
 }
 
 .container {
@@ -26,21 +39,13 @@ body {
     background-color: #fff;
 }
 
-.left-side {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8f8f8;
-}
-
 .right-side {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: 40px;
     background-color: #1f1b37;
-    color: white;
+    color: #f6f0e8;
     justify-content: center;
 }
 
@@ -65,8 +70,40 @@ body {
     padding: 12px;
     border-radius: 25px;
     border: none;
-    background-color: white;
+    background-color: #f6f0e8;
     font-size: 16px;
+}
+
+/* Ajuste para garantir que todos os inputs tenham o mesmo tamanho */
+input {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #f6f0e8;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Configuração específica para a senha */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    padding-right: 40px; /* Garante espaço para o ícone */
+}
+
+/* Ícone do olho dentro do campo de senha */
+.password-container i {
+    position: absolute;
+    right: 15px; /* Posiciona o ícone corretamente */
+    top: 73%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
 }
 
 .submit-btn {
@@ -74,17 +111,19 @@ body {
     padding: 12px;
     border-radius: 25px;
     background-color: transparent;
-    color: white;
+    color: #f6f0e8;
     font-size: 18px;
     cursor: pointer;
     margin-top: 20px;
-    border: 2px solid white;
+    border: 2px solid #f6f0e8;
     transition: background-color 0.3s;
 }
 
 .submit-btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+
 
 @media (max-width: 768px) {
     .container {
