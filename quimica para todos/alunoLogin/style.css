@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 /* Make sure HTML and body take up the full viewport */
 html, body {
     height: 100vh;
@@ -12,9 +13,10 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #f8f8f8;
+    background-color: #f6f0e8;
     font-family: Arial, sans-serif;
 }
+
 
 /* Fill the entire viewport with your content */
 body {
@@ -22,6 +24,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 /* Main container that holds both sides */
 .container {
@@ -35,9 +38,10 @@ body {
     overflow: hidden;
 }
 
+
 /* Logo side */
 .logo-container {
-    background: #f8f8f8;
+    background: #f6f0e8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,27 +50,31 @@ body {
     padding: 20px;
 }
 
+
 .logo-container img {
     max-width: 80%;
     height: auto;
 }
 
+
 /* Login form side */
 .login-container {
     padding: 40px;
-    color: #fff;
+    color: #f6f0e8;
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+   
 }
+
 
 .login-container h2 {
     margin-bottom: 30px;
-    
+   
 }
+
 
 .login-container form {
     display: flex;
@@ -74,9 +82,11 @@ body {
     width: 100%;
 }
 
+
 .login-container label {
     margin: 10px 0 5px;
 }
+
 
 .login-container input {
     padding: 12px;
@@ -86,10 +96,11 @@ body {
     margin-bottom: 15px;
 }
 
+
 .login-container button {
     margin-top: 20px;
     padding: 12px;
-    background: #fff;
+    background: #f6f0e8;
     color: #1a1134;
     border: none;
     border-radius: 5px;
@@ -97,18 +108,22 @@ body {
     font-weight: bold;
 }
 
+
 .login-container button:hover {
-    background: #ddd;
+    background: #f6f0e8;
 }
+
 
 .login-container p {
     margin-top: 20px;
 }
 
+
 .login-container a {
-    color: #fff;
+    color: #f6f0e8;
     text-decoration: underline;
 }
+
 
 input {
     width: 100%;  /* Faz com que todas as caixas ocupem toda a largura do contêiner */
@@ -120,31 +135,35 @@ input {
     box-sizing: border-box; /* Evita que padding afete o tamanho total */
 }
 
+
 .password-container {
     position: relative;
     width: 100%; /* Garante que a div da senha siga a largura dos outros campos */
 }
 
+
 .password-container input {
     padding-right: 40px; /* Espaço extra para o ícone */
 }
 
+
 .password-container i {
     position: absolute;
-    right: 10px; /* Posiciona o ícone corretamente */
-    top: 50%;
+    right: 15px; /* Posiciona o ícone corretamente */
+    top: 42%;
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 20px;
     color: #666;
 }
 
+
 /* Media query for responsive design on smaller screens */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
-    
+   
     .logo-container, .login-container {
         width: 100%;
         height: 50%;
