@@ -87,13 +87,13 @@ body {
 }
 
 .sidebar .footer img {
-    width: 80px;
+    width: 150px;
 }
 
 .sidebar .logout {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     margin-top: 10px;
     color: white;
     font-size: 18px;
