@@ -31,15 +31,10 @@ body {
     background: #3a3755;
 }
 
-/* Reposicionamento do botão quando o menu estiver aberto */
-.sidebar.active ~ #menu-btn {
-    left: 250px; /* Afasta o botão para não cobrir o menu */
-}
-
 /* Sidebar (Menu lateral) */
 .sidebar {
     position: fixed;
-    width: 230px;
+    width: 250px;
     height: 100%;
     background: #1e1b3a;
     padding-top: 20px;
@@ -48,7 +43,7 @@ body {
     justify-content: space-between;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    left: -230px; /* Escondido por padrão */
+    left: -250px; /* Escondido por padrão */
     transition: left 0.4s ease-in-out;
     z-index: 999;
 }
@@ -56,6 +51,11 @@ body {
 /* Mostrar menu quando ativo */
 .sidebar.active {
     left: 0;
+}
+
+/* Reposicionamento do botão quando o menu estiver aberto */
+.sidebar.active ~ #menu-btn {
+    left: 260px; /* Afasta o botão para não cobrir o menu */
 }
 
 /* Estilização dos links do menu */
@@ -118,4 +118,27 @@ body {
 
 .overlay.active {
     display: block;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        left: -200px; /* Escondido inicialmente */
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar.active ~ #menu-btn {
+        left: 210px; /* Ajusta posição do botão */
+    }
+    
+    #menu-btn {
+        top: 15px;
+        left: 15px;
+        font-size: 22px;
+        padding: 8px;
+    }
 }

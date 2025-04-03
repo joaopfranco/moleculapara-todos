@@ -1,15 +1,31 @@
-const menuBtn = document.getElementById("menu-btn");
-const sidebar = document.querySelector(".sidebar");
-const overlay = document.getElementById("overlay");
-
-// Função para abrir e fechar o menu
-menuBtn.addEventListener("click", function () {
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("/menu/menu.html")  // Caminho para o arquivo menu.html
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML("afterbegin", data); // Insere o menu no topo do <body>
+            carregarMenu(); // Chama a função para ativar os eventos do menu
+        })
+        .catch(error => console.error("Erro ao carregar o menu:", error));
 });
 
-// Fechar o menu ao clicar fora dele
-overlay.addEventListener("click", function () {
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-});
+function carregarMenu() {
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.querySelector(".sidebar");
+    let overlay = document.querySelector(".overlay");
+
+    if (!overlay) {
+        overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        document.body.appendChild(overlay);
+    }
+
+    menuBtn.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+    });
+
+    overlay.addEventListener("click", function () {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+    });
+}
