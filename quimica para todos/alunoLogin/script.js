@@ -10,3 +10,4 @@ function mostrarSenha(){
         btnShowPass.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
     }
 }
+

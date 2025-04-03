@@ -12,7 +12,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #f8f8f8;
+    background-color: #f6f0e8;
     font-family: Arial, sans-serif;
 }
 
@@ -37,7 +37,7 @@ body {
 
 /* Logo side */
 .logo-container {
-    background: #f8f8f8;
+    background: #f6f0e8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +54,7 @@ body {
 /* Login form side */
 .login-container {
     padding: 40px;
-    color: #fff;
+    color: #f6f0e8;
     width: 50%;
     height: 100%;
     display: flex;
@@ -89,7 +89,7 @@ body {
 .login-container button {
     margin-top: 20px;
     padding: 12px;
-    background: #fff;
+    background: #f6f0e8;
     color: #1a1134;
     border: none;
     border-radius: 5px;
@@ -98,7 +98,7 @@ body {
 }
 
 .login-container button:hover {
-    background: #ddd;
+    background: #f6f0e8;
 }
 
 .login-container p {
@@ -106,7 +106,7 @@ body {
 }
 
 .login-container a {
-    color: #fff;
+    color: #f6f0e8;
     text-decoration: underline;
 }
 
@@ -115,7 +115,7 @@ input {
     height: 45px; /* Define a mesma altura para todas */
     font-size: 16px; /* Tamanho do texto */
     padding: 10px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda para manter padrão */
+    border: 1px solid #f6f0e8; /* Borda para manter padrão */
     border-radius: 5px; /* Arredondamento leve */
     box-sizing: border-box; /* Evita que padding afete o tamanho total */
 }
@@ -137,6 +137,10 @@ input {
     cursor: pointer;
     font-size: 20px;
     color: #666;
+}
+
+.cadastro {
+    color: #d8caff;
 }
 
 /* Media query for responsive design on smaller screens */
