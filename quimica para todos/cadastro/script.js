@@ -10,3 +10,7 @@ function mostrarSenha() {
         btnShowPass.classList.replace("bi-eye-slash-fill", "bi-eye-fill");
     }
 }
+
+function criarconta(page){
+    window.location.href = page;
+}
