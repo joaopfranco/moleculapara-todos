@@ -1,5 +1,5 @@
-function alunoLogin(page){
-    window.location.href = page;
+function alunoLogin(url){
+    window.location.href = url;
 }
 
 function profLogin(page){
