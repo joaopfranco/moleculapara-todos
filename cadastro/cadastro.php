@@ -5,39 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="/quimica para todos/cadastro/style.css">
-    <link rel="shortcut icon" href="/quimica para todos/imagens/favicon.ico" type="image/x-icon">
-    <title>Faça seu cadastro</title>
+    <link rel="stylesheet" type="text/css" href="/cadastro/cadastro.css">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    <title>Faça seu cadastro Professor</title>
 </head>
 <body>
     <div class="container">
         <div class="logo-container">
-            <img src="/quimica para todos/imagens/logoCienciaParaTodos.png" alt="Ciência para Todos">
+            <img src="/imagens/logoCienciaParaTodos.png" alt="Ciência para Todos">
         </div>
     <div class="container">
         <div class="left-side">
         </div>
         <div class="right-side">
             <h1 class="form-title">Faça seu cadastro</h1>
+            <form action="post" method="cadastroAlunoProf.php">
             
             <div class="form-group">
                 <label class="form-label">Nome</label>
-                <input type="text" class="form-input">
+                <input type="text" name="nome" class="form-input" required>
             </div>
             
             <div class="form-group">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-input">
+                <input type="email" name="email" class="form-input" required>
             </div>
             <div class="form-group password-container">
                 <label class="form-label">Senha</label>
-                <input type="password" class="form-input" id="password">
+                <input type="password" name="senha" class="form-input" id="password" required>
                 <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
             </div>
         //colocar o link certo 
-            <button class="submit-btn" onclick="criarconta('/paginaInicial/index.html')" id = "pg">Criar conta</button>
+            <input type="submit" value='Criar Conta'>
+            </form>
         </div>
     </div>
-    <script src="/quimica para todos/cadastro/script.js"></script>
+    <script src="cadastro.js"></script>
 </body>
 </html>
